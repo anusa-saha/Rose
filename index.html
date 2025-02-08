@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Rose</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        var audio = new Audio('song.mp3'); // Replace with your actual audio file
+
+        function playMusic() {
+            var message = document.getElementById("message");
+
+            if (audio.paused) {
+                audio.play();
+                message.innerText = "Enjoy the music! 🎶 Click again to pause.";
+            } else {
+                audio.pause();
+                message.innerText = "Music paused. Click the rose to play again.";
+            }
+        }
+    </script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #122139;
+            color: white;
+        }
+        #message {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌹 Click on the Rose to Play/Pause Music 🎶</h1>
+    <div class="container" onclick="playMusic()">
+        <div class="glass"></div>
+        <div class="thorns">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="glow"></div>
+        <div class="rose-leaves">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="rose-petals">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sparkles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <p id="message">Hey Bubbles, this is for you my baby</p>
+
+</body>
+</html>
